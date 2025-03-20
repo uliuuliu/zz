@@ -15,7 +15,7 @@ import time
 # 配置日志
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
-IPaddressduo="222.79.104.143----162.14.80.53----43.163.100.58"
+IPaddressduo = os.getenv("IPaddressduo", "")
 try:
     from web3 import Web3  # 添加Web3库用于查询余额
 except ImportError:
